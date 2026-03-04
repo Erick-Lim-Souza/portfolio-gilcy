@@ -356,8 +356,9 @@
 
     /* ─── FOOTER ─── */
     footer {
-      padding: 2rem 4rem;
+      padding: 2.4rem 4rem;
       display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
       border-top: 1px solid var(--line);
       background: #fff;
     }
@@ -366,6 +367,20 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.05rem; color: var(--ink);
     }
+    .footer-credit {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .72rem; color: var(--muted); letter-spacing: .04em;
+    }
+    .footer-credit-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #22c55e; flex-shrink: 0;
+      box-shadow: 0 0 6px rgba(34,197,94,.6);
+    }
+    .footer-credit a {
+      color: #16a34a; text-decoration: none; font-weight: 500;
+      transition: opacity .2s;
+    }
+    .footer-credit a:hover { opacity: .7; }
 
     /* ─── REVEAL ANIMATIONS ─── */
     .reveal {
@@ -422,6 +437,7 @@
       <div class="hero-cta">
         <a href="#contato" class="btn-primary">Entrar em Contato</a>
         <a href="https://www.linkedin.com/in/gilcykellyrodrigues/" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+        <a href="https://www.instagram.com/kellyramos133/" target="_blank" rel="noopener" class="btn-outline">Instagram</a>
       </div>
     </div>
 
@@ -447,7 +463,7 @@
         <div class="sobre-left reveal" style="transition-delay:.1s">
           <div class="sobre-stats">
             <div class="stat">
-              <div class="stat-num">1+</div>
+              <div class="stat-num">+1</div>
               <div class="stat-label">Anos de experiência</div>
             </div>
             <div class="stat">
@@ -603,7 +619,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
           </div>
-          <div class="edu-degree">Farmácia Clínica e Prescrição Farmacêutica</div>
+          <div class="edu-degree">Pós Graduação - Farmácia Clínica e Prescrição Farmacêutica</div>
           <div class="edu-inst">INCAF Educação</div>
           <div class="edu-period">2025 – Presente</div>
         </div>
@@ -628,7 +644,7 @@
             sobre farmácia clínica — estou à disposição.
           </p>
           <div style="margin-top:2.4rem">
-            <a href="mailto:drgilcykellydossantosrodrigues@gmail.com" class="btn-primary">Enviar E-mail</a>
+            <a href="mailto:drgilcykelly@gmail.com" class="btn-primary">Enviar E-mail</a>
           </div>
         </div>
         <div class="contact-list reveal" style="transition-delay:.2s">
@@ -640,7 +656,7 @@
             </div>
             <div>
               <div class="c-label">E-mail</div>
-              <div class="c-value">drgilcykellydossantosrodrigues@gmail.com</div>
+              <div class="c-value">drgilcykelly@gmail.com</div>
             </div>
           </div>
           <div class="contact-item">
@@ -666,16 +682,50 @@
               <div class="c-value">Goiânia – GO, Brasil</div>
             </div>
           </div>
+          <div class="contact-item">
+            <div class="c-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div>
+              <div class="c-label">Instagram</div>
+              <div class="c-value"><a href="https://www.instagram.com/kellyramos133/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">@kellyramos133</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12" stroke-width="1.5"/>
+                <circle cx="4" cy="4" r="2" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <div class="c-label">LinkedIn</div>
+              <div class="c-value"><a href="https://www.linkedin.com/in/gilcykellyrodrigues/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">gilcykellyrodrigues</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- FOOTER -->
   <footer>
     <span class="footer-brand">Gilcy Kelly · dos Santos</span>
-    <p>© 2026 Todos os direitos reservados.</p>
-    <p>CRF-GO 23545</p>
+    <p>© 2026 Todos os direitos reservados. · CRF-GO 23545</p>
+    <div class="footer-credit">
+      <div class="footer-credit-dot"></div>
+      Desenvolvido em parceria com
+      <a href="https://ericklima-dev.netlify.app/" target="_blank" rel="noopener">
+        Green Monster Project
+      </a>
+      · Dev Erick de Lima Souza
+    </div>
   </footer>
 
   <!-- REVEAL SCRIPT -->
