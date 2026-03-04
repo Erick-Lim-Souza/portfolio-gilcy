@@ -17,14 +17,15 @@
 
 <br/>
 
-[![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat-square&color=0C6E67)](https://gilcykelly.github.io/portfolio)
+[![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat-square&color=0C6E67)](https://drgilcykelly.netlify.app)
+[![Netlify](https://img.shields.io/badge/deploy-netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://netlify.com)
 [![HTML5](https://img.shields.io/badge/HTML5-pure-orange?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-custom-blue?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)](./LICENSE)
 
 <br/>
 
-[**→ Ver online**](https://gilcykelly.github.io/portfolio) &nbsp;·&nbsp; [**Reportar problema**](../../issues)
+[**→ Ver online**](https://drgilcykelly.netlify.app) &nbsp;·&nbsp; [**Reportar problema**](../../issues)
 
 <br/>
 
@@ -48,7 +49,7 @@ O design segue uma linha **premium minimalista**: tipografia editorial, paleta c
 | **CSS3 (Custom Properties)** | Design system, layout Grid & Flexbox |
 | **Google Fonts** | Cormorant Garamond + DM Sans |
 | **Vanilla JavaScript** | Intersection Observer (animações de scroll) |
-| **GitHub Pages** | Hospedagem gratuita e contínua |
+| **Netlify** | Hospedagem com deploy contínuo via Git |
 
 > Nenhuma biblioteca JavaScript externa. Zero dependências de build. Um único arquivo `index.html`.
 
@@ -64,7 +65,9 @@ portfolio-gilcy/
 │
 ├── README.md           # Este arquivo
 ├── .gitignore          # Arquivos ignorados pelo Git
-└── LICENSE             # Licença MIT
+├── LICENSE             # Licença MIT
+└── docs/
+    └── DEPLOY.md       # Guia de deploy no Netlify
 ```
 
 ---
@@ -110,44 +113,36 @@ git clone https://github.com/seu-usuario/portfolio-gilcy.git
 # 2. Acesse a pasta
 cd portfolio-gilcy
 
-# 3. Abra no navegador
-# Basta abrir o arquivo index.html diretamente
+# 3. Abra no navegador (sem servidor necessário)
 open index.html         # macOS
 start index.html        # Windows
 xdg-open index.html     # Linux
 ```
 
-Não é necessário nenhum servidor ou instalação adicional.
+---
+
+## ✦ Deploy no Netlify
+
+Consulte o guia completo em [`docs/DEPLOY.md`](./docs/DEPLOY.md).
+
+**Resumo rápido:**
+1. Crie uma conta em [netlify.com](https://netlify.com)
+2. Conecte este repositório GitHub ao Netlify
+3. Configure: Build command vazio · Publish directory: `.` (raiz)
+4. Clique em **Deploy site** — pronto! ✅
+
+O site é atualizado automaticamente a cada `git push`.
 
 ---
 
-## ✦ Deploy com GitHub Pages
+## ✦ Créditos
 
-1. Acesse **Settings** → **Pages** no repositório
-2. Em **Source**, selecione `Deploy from a branch`
-3. Escolha a branch `main` e a pasta `/ (root)`
-4. Clique em **Save**
-5. O site ficará disponível em:
-   `https://seu-usuario.github.io/portfolio-gilcy`
+Este projeto foi desenvolvido em parceria com o **Green Monster Project**.
 
----
-
-## ✦ Customização
-
-Para atualizar as informações do portfólio, edite diretamente o `index.html`:
-
-```html
-<!-- Nome e CRF -->
-<span class="hero-eyebrow">CRF-GO 23545</span>
-<h1 class="hero-name">Gilcy<br>Kelly<br><em>Rodrigues</em></h1>
-
-<!-- Foto de perfil -->
-<img src="dr_gilcy.jpeg" alt="...">
-
-<!-- Informações de contato -->
-<div class="c-value">seu-email@gmail.com</div>
-<div class="c-value">(XX) X XXXX-XXXX</div>
-```
+| Papel | Profissional |
+|---|---|
+| Desenvolvimento & Design | Dev Erick de Lima Souza · Green Monster Project |
+| Conteúdo & Identidade Profissional | Gilcy Kelly dos Santos Rodrigues |
 
 ---
 
@@ -163,6 +158,8 @@ Distribuído sob a licença **MIT**. Veja [`LICENSE`](./LICENSE) para mais detal
 
 Feito com cuidado e atenção aos detalhes.
 
-**Gilcy Kelly dos Santos Rodrigues** · Goiânia – GO · 2026
+🟢 **Green Monster Project** · Dev Erick de Lima Souza
+
+**Gilcy Kelly Rodrigues** · Goiânia – GO · 2026
 
 </div>
