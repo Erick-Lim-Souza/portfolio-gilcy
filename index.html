@@ -406,6 +406,61 @@
     @media (max-width: 600px) {
       .skills-grid { grid-template-columns: 1fr; }
     }
+    /* ─── FLOATING CV BUTTON ─── */
+    .fab-cv {
+      position: fixed;
+      bottom: 2.2rem;
+      right: 2.2rem;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: .9rem 1.5rem .9rem 1.1rem;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 28px rgba(12,110,103,.40);
+      transition: background .25s, transform .2s, box-shadow .25s;
+      animation: fab-pulse 2.4s ease-in-out infinite;
+    }
+    .fab-cv:hover {
+      background: var(--teal-lt);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 14px 36px rgba(12,110,103,.50);
+      animation: none;
+    }
+    .fab-cv svg {
+      width: 18px; height: 18px; flex-shrink: 0;
+    }
+    .fab-ring {
+      position: fixed;
+      bottom: 2.2rem;
+      right: 2.2rem;
+      z-index: 199;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(12,110,103,.25);
+      animation: fab-ring 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes fab-pulse {
+      0%, 100% { box-shadow: 0 8px 28px rgba(12,110,103,.40); }
+      50%       { box-shadow: 0 8px 40px rgba(12,110,103,.70), 0 0 0 8px rgba(12,110,103,.12); }
+    }
+    @keyframes fab-ring {
+      0%        { transform: scale(1);   opacity: .7; }
+      70%       { transform: scale(2.6); opacity: 0;  }
+      100%      { transform: scale(2.6); opacity: 0;  }
+    }
+    @media (max-width: 600px) {
+      .fab-cv   { bottom: 1.4rem; right: 1.4rem; padding: .8rem 1.2rem .8rem .9rem; font-size: .72rem; }
+      .fab-ring { bottom: 1.4rem; right: 1.4rem; }
+    }
   </style>
 </head>
 <body>
@@ -728,13 +783,24 @@
     </div>
   </footer>
 
+  <!-- FLOATING CV BUTTON -->
+  <div class="fab-ring"></div>
+  <a href="curriculo-gilcy-kelly.pdf" download="Curriculo_Gilcy_Kelly_dos_Santos.pdf" class="fab-cv" title="Baixar Currículo em PDF">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+        d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+        d="M8 6H5a2 2 0 00-2 2v4M16 6h3a2 2 0 012 2v4"/>
+      <rect x="7" y="2" width="10" height="12" rx="1" stroke-width="1.8"/>
+    </svg>
+    Baixar CV
+  </a>
+
   <!-- REVEAL SCRIPT -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-        }
+        if (e.isIntersecting) e.target.classList.add('visible');
       });
     }, { threshold: 0.12 });
 
