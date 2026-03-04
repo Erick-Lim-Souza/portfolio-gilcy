@@ -397,7 +397,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">Gilcy Kelly · Rodrigues</a>
+    <a href="#" class="nav-logo">Gilcy Kelly · dos Santos</a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#experiencia">Experiência</a></li>
@@ -412,7 +412,7 @@
     <div class="hero-text reveal">
       <span class="hero-eyebrow">CRF-GO 23545</span>
       <h1 class="hero-name">
-        Gilcy<br>Kelly<br><em>Rodrigues</em>
+        Gilcy<br>Kelly<br><em>dos Santos</em>
       </h1>
       <p class="hero-tagline">
         Farmacêutica Clínica com atuação em segurança do paciente,
@@ -421,7 +421,7 @@
       </p>
       <div class="hero-cta">
         <a href="#contato" class="btn-primary">Entrar em Contato</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/gilcykellyrodrigues/" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
       </div>
     </div>
 
@@ -429,7 +429,7 @@
       <div class="hero-image-frame">
         <img src="dr_gilcy.jpeg" alt="Gilcy Kelly – Farmacêutica Clínica" class="hero-img">
         <div class="hero-badge">
-          <strong>+ 3 anos</strong>
+          <strong>+ 1 ano</strong>
           de experiência clínica
         </div>
       </div>
@@ -447,11 +447,11 @@
         <div class="sobre-left reveal" style="transition-delay:.1s">
           <div class="sobre-stats">
             <div class="stat">
-              <div class="stat-num">3+</div>
+              <div class="stat-num">1+</div>
               <div class="stat-label">Anos de experiência</div>
             </div>
             <div class="stat">
-              <div class="stat-num">2</div>
+              <div class="stat-num">1</div>
               <div class="stat-label">Pós-graduações em andamento</div>
             </div>
             <div class="stat">
@@ -595,7 +595,7 @@
           </div>
           <div class="edu-degree">Graduação em Farmácia</div>
           <div class="edu-inst">FacUnicamps · Goiânia, GO</div>
-          <div class="edu-period">2020 – 2024</div>
+          <div class="edu-period">2020 – 2025</div>
         </div>
         <div class="edu-card reveal" style="transition-delay:.12s">
           <div class="edu-icon">
@@ -628,7 +628,7 @@
             sobre farmácia clínica — estou à disposição.
           </p>
           <div style="margin-top:2.4rem">
-            <a href="/cdn-cgi/l/email-protection#bed9d7d2ddc7d5dbd2d2c7dad1cdcddfd0cad1cdccd1daccd7d9cbdbcdfed9d3dfd7d290ddd1d3" class="btn-primary">Enviar E-mail</a>
+            <a href="mailto:drgilcykellydossantosrodrigues@gmail.com" class="btn-primary">Enviar E-mail</a>
           </div>
         </div>
         <div class="contact-list reveal" style="transition-delay:.2s">
@@ -640,7 +640,7 @@
             </div>
             <div>
               <div class="c-label">E-mail</div>
-              <div class="c-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c2b25202f35272920203528233f3f2d2238233f3e23283e252b39293f0c2b212d2520622f2321">[email&#160;protected]</a></div>
+              <div class="c-value">drgilcykellydossantosrodrigues@gmail.com</div>
             </div>
           </div>
           <div class="contact-item">
@@ -673,11 +673,22 @@
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-brand">Gilcy Kelly · Rodrigues</span>
+    <span class="footer-brand">Gilcy Kelly · dos Santos</span>
     <p>© 2026 Todos os direitos reservados.</p>
     <p>CRF-GO 23545</p>
   </footer>
 
   <!-- REVEAL SCRIPT -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const obs
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
