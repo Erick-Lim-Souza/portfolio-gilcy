@@ -389,6 +389,47 @@
     }
     .reveal.visible { opacity: 1; transform: none; }
 
+/* ==========================================================
+   ASSINATURA GREEN MONSTER - ESTILO FARMACÊUTICO
+========================================================== */
+.gmp-footer-signature {
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    white-space: nowrap !important;
+}
+
+.gmp-footer-signature:hover {
+    opacity: 1;
+}
+
+.gmp-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px !important;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.gmp-logo {
+    font-family: 'DM Sans', sans-serif; /* Mantendo a fonte do site */
+    font-weight: 700;
+    font-size: 11px !important;
+    letter-spacing: 0.5px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 3px;
+}
+
+.gmp-logo .w { color: var(--ink) !important; }
+.gmp-logo .g { color: var(--teal) !important; } /* Usando o verde do logo dela */
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       nav { padding: 1.2rem 1.8rem; }
@@ -408,26 +449,26 @@
     }
     /* ─── FLOATING CV BUTTON ─── */
     .fab-cv {
-      position: fixed;
-      bottom: 2.2rem;
-      right: 2.2rem;
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      gap: .7rem;
-      background: var(--teal);
-      color: #fff;
-      text-decoration: none;
-      padding: .9rem 1.5rem .9rem 1.1rem;
-      border-radius: 100px;
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      box-shadow: 0 8px 28px rgba(12,110,103,.40);
-      transition: background .25s, transform .2s, box-shadow .25s;
-      animation: fab-pulse 2.4s ease-in-out infinite;
-    }
+  position: fixed;
+  bottom: 6rem; /* Subimos de 2.2rem para 6rem */
+  right: 2.2rem;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  background: var(--teal);
+  color: #fff;
+  text-decoration: none;
+  padding: .9rem 1.5rem .9rem 1.1rem;
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 28px rgba(12,110,103,.40);
+  transition: background .25s, transform .2s, box-shadow .25s;
+  animation: fab-pulse 2.4s ease-in-out infinite;
+}
     .fab-cv:hover {
       background: var(--teal-lt);
       transform: translateY(-3px) scale(1.04);
@@ -437,17 +478,18 @@
     .fab-cv svg {
       width: 18px; height: 18px; flex-shrink: 0;
     }
+/* O anel de animação deve seguir a mesma altura */
     .fab-ring {
-      position: fixed;
-      bottom: 2.2rem;
-      right: 2.2rem;
-      z-index: 199;
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: rgba(12,110,103,.25);
-      animation: fab-ring 2.4s ease-in-out infinite;
-      pointer-events: none;
-    }
+  position: fixed;
+  bottom: 6rem; /* Ajustado para 6rem para casar com o botão */
+  right: 2.2rem;
+  z-index: 199;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(12,110,103,.25);
+  animation: fab-ring 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
     @keyframes fab-pulse {
       0%, 100% { box-shadow: 0 8px 28px rgba(12,110,103,.40); }
       50%       { box-shadow: 0 8px 40px rgba(12,110,103,.70), 0 0 0 8px rgba(12,110,103,.12); }
@@ -784,19 +826,19 @@
   </section>
 
 
-  <!-- FOOTER -->
-  <footer>
+<footer translate="no" class="notranslate">
     <span class="footer-brand">Gilcy Kelly · dos Santos</span>
     <p>© 2026 Todos os direitos reservados. · CRF-GO 23545</p>
-    <div class="footer-credit">
-      <div class="footer-credit-dot"></div>
-      Desenvolvido em parceria com
-      <a href="https://ericklima-dev.netlify.app/" target="_blank" rel="noopener">
-        Green Monster Project
-      </a>
-      · Dev Erick de Lima Souza
-    </div>
-  </footer>
+    
+    <a href="https://greenmonster.netlify.app/" target="_blank" rel="noopener noreferrer" class="gmp-footer-signature">
+        <span class="gmp-tag">built by</span>
+        <div class="gmp-logo">
+            <span class="w">GREEN</span>
+            <span class="g">MONSTER</span>
+            <span class="w">PROJECT</span>
+        </div>
+    </a>
+</footer>
 
   <!-- FLOATING CV BUTTON -->
   <div class="fab-ring"></div>
